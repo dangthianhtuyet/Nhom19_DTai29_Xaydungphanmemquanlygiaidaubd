@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatsTab</class>
+ <widget class="QWidget" name="StatsTab">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Tab Thống Kê</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item><widget class="QLabel" name="lblTitle"><property name="text"><string>📈  Thống kê giải đấu</string></property></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QLabel" name="statsSummary"><property name="text"><string>Tổng trận: 0 | Đã đá: 0 | Tổng bàn: 0</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnRefresh"><property name="text"><string>🔄 Làm mới</string></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="innerTabs">
+     <!-- Tab 1: Vua pha luoi -->
+     <widget class="QWidget" name="tabScorer">
+      <attribute name="title"><string>⚽  Vua phá lưới</string></attribute>
+      <layout class="QVBoxLayout">
+       <item><widget class="QLabel" name="lblPodium"><property name="text"><string>🥇 Top 3 ghi bàn nhiều nhất</string></property></widget></item>
+       <item>
+        <widget class="QTableWidget" name="scorerTbl">
+         <property name="columnCount"><number>5</number></property>
+         <attribute name="horizontalHeaderLabel"><string>#</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Cầu thủ</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Đội</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Số áo</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>⚽ Bàn</string></attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Tab 2: Thong ke doi -->
+     <widget class="QWidget" name="tabTeamStats">
+      <attribute name="title"><string>🏆  Thống kê đội</string></attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QTableWidget" name="teamTbl">
+         <property name="columnCount"><number>10</number></property>
+         <attribute name="horizontalHeaderLabel"><string>#</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Đội</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Trận</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Thắng</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Hòa</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Thua</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Bàn vào</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Bàn thủng</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Hiệu số</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Điểm</string></attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Tab 3: The phat -->
+     <widget class="QWidget" name="tabCards">
+      <attribute name="title"><string>🟨  Thẻ phạt</string></attribute>
+      <layout class="QVBoxLayout">
+       <item>
+        <widget class="QTableWidget" name="cardTbl">
+         <property name="columnCount"><number>6</number></property>
+         <attribute name="horizontalHeaderLabel"><string>#</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Cầu thủ</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Đội</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>🟨 Vàng</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>🟥 Đỏ</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Trạng thái</string></attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Tab 4: Ket qua -->
+     <widget class="QWidget" name="tabResult">
+      <attribute name="title"><string>🏅  Kết quả</string></attribute>
+      <layout class="QVBoxLayout">
+       <item><widget class="QLabel" name="championLbl"><property name="text"><string>Chung kết chưa diễn ra</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+       <item>
+        <widget class="QTableWidget" name="koTbl">
+         <property name="columnCount"><number>5</number></property>
+         <attribute name="horizontalHeaderLabel"><string>Vòng</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Đội A</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Tỷ số</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Đội B</string></attribute>
+         <attribute name="horizontalHeaderLabel"><string>Kết quả</string></attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

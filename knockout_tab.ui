@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>KnockoutTab</class>
+ <widget class="QWidget" name="KnockoutTab">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Tab Knockout</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item><widget class="QLabel" name="lblTitle"><property name="text"><string>🏆  Vòng Knockout</string></property></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QPushButton" name="btnCreate"><property name="text"><string>🏅 Tạo knockout</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnRefresh"><property name="text"><string>🔄 Làm mới</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnResult"><property name="text"><string>✏ Nhập kết quả</string></property></widget></item>
+    </layout>
+   </item>
+   <!-- Bracket hien thi cap dau -->
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable"><bool>true</bool></property>
+     <widget class="QWidget" name="bracketContent">
+      <layout class="QVBoxLayout" name="bracketLayout">
+       <item><widget class="QLabel" name="lblEmpty"><property name="text"><string>Chưa có vòng knockout. Bấm nút 🏅 Tạo knockout ở trên để bắt đầu.</string></property></widget></item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <!-- Bang ket qua knockout -->
+   <item>
+    <widget class="QTableWidget" name="matchTbl">
+     <property name="maximumSize"><size><width>16777215</width><height>260</height></size></property>
+     <property name="columnCount"><number>5</number></property>
+     <attribute name="horizontalHeaderLabel"><string>Giai đoạn</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Đội A</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Tỷ số</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Đội B</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Trạng thái</string></attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

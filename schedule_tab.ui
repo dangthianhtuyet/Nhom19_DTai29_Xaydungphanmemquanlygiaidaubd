@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScheduleTab</class>
+ <widget class="QWidget" name="ScheduleTab">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Tab Lịch Vòng Bảng</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item><widget class="QLabel" name="lblTitle"><property name="text"><string>📅  Lịch thi đấu Vòng Bảng</string></property></widget></item>
+   <item><widget class="QLabel" name="lblGuide"><property name="text"><string>💡 Vòng bảng thi đấu tại đây. Sau khi xong → sang tab Knockout để tiếp tục.</string></property></widget></item>
+   <!-- Toolbar -->
+   <item>
+    <layout class="QHBoxLayout" name="toolbarLayout">
+     <item><widget class="QPushButton" name="btnGenGroup"><property name="text"><string>⚙ Tạo lịch vòng bảng</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnEnterResult"><property name="text"><string>✏ Nhập kết quả</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnSetDate"><property name="text"><string>📅 Đặt ngày</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnClearResult"><property name="text"><string>🔄 Xóa kết quả</string></property></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QLabel" name="statsLabel"><property name="text"><string>Vòng bảng: 0/0 trận đã đá</string></property></widget></item>
+    </layout>
+   </item>
+   <!-- Filter -->
+   <item>
+    <layout class="QHBoxLayout" name="filterLayout">
+     <item><widget class="QLabel" name="lblGroup"><property name="text"><string>Bảng:</string></property></widget></item>
+     <item><widget class="QComboBox" name="groupCombo"><property name="minimumSize"><size><width>90</width><height>0</height></size></property></widget></item>
+     <item><widget class="QLabel" name="lblStatus"><property name="text"><string>Trạng thái:</string></property></widget></item>
+     <item><widget class="QComboBox" name="statusCombo"><property name="minimumSize"><size><width>110</width><height>0</height></size></property></widget></item>
+     <item><widget class="QLineEdit" name="searchEdit"><property name="placeholderText"><string>🔍 Tìm kiếm tên đội...</string></property><property name="minimumSize"><size><width>200</width><height>0</height></size></property></widget></item>
+     <item><widget class="QPushButton" name="btnSortDate"><property name="text"><string>📆 Sắp theo ngày</string></property></widget></item>
+     <item><widget class="QPushButton" name="btnSortGroup"><property name="text"><string>🅰 Sắp theo bảng</string></property></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+    </layout>
+   </item>
+   <!-- Bang tran dau -->
+   <item>
+    <widget class="QTableWidget" name="matchTbl">
+     <property name="columnCount"><number>7</number></property>
+     <attribute name="horizontalHeaderLabel"><string>Vòng</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>🏳 Đội A</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Tỷ số</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Đội B 🏳</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Bảng</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Ngày</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Trạng thái</string></attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

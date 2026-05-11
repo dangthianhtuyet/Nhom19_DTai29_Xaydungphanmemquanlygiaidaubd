@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialogs</class>
+ <widget class="QWidget" name="Dialogs">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>800</width><height>600</height></rect></property>
+  <property name="windowTitle"><string>Các Dialog - Thêm/Sửa Dữ Liệu</string></property>
+  <layout class="QHBoxLayout">
+   <!-- Dialog Them Doi -->
+   <item>
+    <widget class="QGroupBox" name="grpTeam">
+     <property name="title"><string>Dialog: Thêm / Sửa Đội</string></property>
+     <layout class="QFormLayout">
+      <item row="0" column="0"><widget class="QLabel" name="lblTeamName"><property name="text"><string>Tên đội:</string></property></widget></item>
+      <item row="0" column="1"><widget class="QLineEdit" name="teamNameEdit"><property name="placeholderText"><string>Tên đội bóng</string></property></widget></item>
+      <item row="1" column="0"><widget class="QLabel" name="lblGroup"><property name="text"><string>Bảng:</string></property></widget></item>
+      <item row="1" column="1"><widget class="QComboBox" name="groupCombo"></widget></item>
+      <item row="2" column="0"><widget class="QLabel" name="lblColor"><property name="text"><string>Màu:</string></property></widget></item>
+      <item row="2" column="1"><widget class="QComboBox" name="colorCombo"></widget></item>
+      <item row="3" column="1">
+       <widget class="QDialogButtonBox" name="teamBtns">
+        <property name="standardButtons"><set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- Dialog Them Cau Thu -->
+   <item>
+    <widget class="QGroupBox" name="grpPlayer">
+     <property name="title"><string>Dialog: Thêm / Sửa Cầu Thủ</string></property>
+     <layout class="QFormLayout">
+      <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Họ tên:</string></property></widget></item>
+      <item row="0" column="1"><widget class="QLineEdit" name="playerNameEdit"><property name="placeholderText"><string>Tên cầu thủ</string></property></widget></item>
+      <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Số áo:</string></property></widget></item>
+      <item row="1" column="1"><widget class="QSpinBox" name="numberSpin"><property name="minimum"><number>1</number></property><property name="maximum"><number>99</number></property></widget></item>
+      <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Vị trí:</string></property></widget></item>
+      <item row="2" column="1"><widget class="QComboBox" name="posCombo"></widget></item>
+      <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Quốc tịch:</string></property></widget></item>
+      <item row="3" column="1"><widget class="QComboBox" name="natCombo"><property name="editable"><bool>true</bool></property></widget></item>
+      <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Tình trạng:</string></property></widget></item>
+      <item row="4" column="1"><widget class="QComboBox" name="statusCombo"></widget></item>
+      <item row="5" column="1">
+       <widget class="QDialogButtonBox" name="playerBtns">
+        <property name="standardButtons"><set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

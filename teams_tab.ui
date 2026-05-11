@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TeamsTab</class>
+ <widget class="QWidget" name="TeamsTab">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Tab Đội / Cầu Thủ</string></property>
+  <layout class="QHBoxLayout" name="mainLayout">
+   <!-- BEN TRAI: Danh sach doi -->
+   <item>
+    <widget class="QWidget" name="leftPanel">
+     <property name="minimumSize"><size><width>300</width><height>0</height></size></property>
+     <property name="maximumSize"><size><width>300</width><height>16777215</height></size></property>
+     <layout class="QVBoxLayout" name="leftLayout">
+      <item><widget class="QLabel" name="lblTeamsTitle"><property name="text"><string>🏆  Danh sách đội</string></property></widget></item>
+      <item><widget class="QLabel" name="lblTeamsSub"><property name="text"><string>Quản lý đội bóng tham dự</string></property></widget></item>
+      <item>
+       <layout class="QHBoxLayout" name="teamBtnLayout">
+        <item><widget class="QPushButton" name="btnAddTeam"><property name="text"><string>+ Thêm đội</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnDelTeam"><property name="text"><string>🗑 Xóa</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="teamTbl">
+        <property name="columnCount"><number>3</number></property>
+        <attribute name="horizontalHeaderLabel"><string>Tên đội</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Bảng</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Cầu thủ</string></attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <!-- BEN PHAI: Danh sach cau thu -->
+   <item>
+    <widget class="QWidget" name="rightPanel">
+     <layout class="QVBoxLayout" name="rightLayout">
+      <item><widget class="QLabel" name="lblPlayersTitle"><property name="text"><string>👤  Cầu thủ</string></property></widget></item>
+      <item><widget class="QLabel" name="lblTeamName"><property name="text"><string>Chọn một đội để xem cầu thủ</string></property></widget></item>
+      <item>
+       <layout class="QHBoxLayout" name="playerBtnLayout">
+        <item><widget class="QPushButton" name="btnAddPlayer"><property name="text"><string>+ Thêm cầu thủ</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnEditPlayer"><property name="text"><string>✏ Sửa</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnDelPlayer"><property name="text"><string>🗑 Xóa CT</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="statusBtnLayout">
+        <item><widget class="QLabel" name="lblStatus"><property name="text"><string>Đặt trạng thái:</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnDaDa"><property name="text"><string>⚽ Đã đá</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnDuBi"><property name="text"><string>🪑 Dự bị</string></property></widget></item>
+        <item><widget class="QPushButton" name="btnSanSang"><property name="text"><string>✅ Sẵn sàng</string></property></widget></item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="playerTbl">
+        <property name="columnCount"><number>5</number></property>
+        <attribute name="horizontalHeaderLabel"><string>#</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Họ tên</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Vị trí</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Quốc tịch</string></attribute>
+        <attribute name="horizontalHeaderLabel"><string>Trạng thái</string></attribute>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

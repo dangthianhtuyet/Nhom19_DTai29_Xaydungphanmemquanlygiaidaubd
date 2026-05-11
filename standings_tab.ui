@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StandingsTab</class>
+ <widget class="QWidget" name="StandingsTab">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>700</height></rect></property>
+  <property name="windowTitle"><string>Tab Bảng Xếp Hạng</string></property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <item><widget class="QLabel" name="lblTitle"><property name="text"><string>📊  Bảng xếp hạng</string></property></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+     <item><widget class="QPushButton" name="btnRefresh"><property name="text"><string>🔄 Làm mới</string></property></widget></item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="filterLayout">
+     <item><widget class="QLabel" name="lblGroup"><property name="text"><string>Bảng:</string></property></widget></item>
+     <item><widget class="QComboBox" name="groupCombo"></widget></item>
+     <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="standingsTbl">
+     <property name="columnCount"><number>9</number></property>
+     <attribute name="horizontalHeaderLabel"><string>#</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Đội</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Trận</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Thắng</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Hòa</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Thua</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Bàn vào</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Bàn thủng</string></attribute>
+     <attribute name="horizontalHeaderLabel"><string>Điểm</string></attribute>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>
